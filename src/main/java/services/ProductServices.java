@@ -30,7 +30,6 @@ public class ProductServices {
         if (keyword != null && !keyword.isEmpty()) {
             Predicate predicateKeyWord = builder.like(pRoot.get("name").as(String.class), "%" + keyword + "%");
             predicates.add(predicateKeyWord);
-            criteriaQuery = criteriaQuery.where(predicateKeyWord);
         }
 
 
